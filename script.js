@@ -1,8 +1,6 @@
-if (process.env.NODE_ENV !== 'production') {
-    require('dotenv').config();
-}
+import config from './config.js';
 
-const apiKey = process.env.WEATHER_API_KEY;
+const apiKey = config.apiKey;
 
 async function getCoordinates(city) {
     const geocodingApiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`;

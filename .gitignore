@@ -7,3 +7,4 @@ node_modules/
 # Other
 .env
 .env.*
+config.js
