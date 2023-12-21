@@ -1,5 +1,9 @@
+import config from './config.js';
+
+const apiKey = config.apiKey;
+
 async function getCoordinates(city) {
-    const geocodingApiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=910f8c67ed6b2646ba7301010baaaa4b`;
+    const geocodingApiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`;
 
     const response = await fetch(geocodingApiUrl);
     const data = await response.json();
@@ -16,7 +20,6 @@ async function getCoordinates(city) {
 }
 
 async function getWeather(latlon) {
-    const apiKey = '910f8c67ed6b2646ba7301010baaaa4b';
     const lat = latlon[0];
     const lon = latlon[1];
     const weatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
@@ -61,3 +64,8 @@ async function searchWeather() {
         alert('Please enter a city name');
     }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const searchButton = document.getElementById('searchButton');
+    searchButton.addEventListener('click', searchWeather);
+});
