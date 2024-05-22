@@ -36,7 +36,7 @@ async function getWeather(latlon) {
 
 function displayWeather(data) {
     const weatherResult = document.getElementById('weatherResult');
-
+    
     const cityName = data.name;
     const temperature = data.main.temp;
     const description = data.weather[0].main;
