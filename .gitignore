@@ -5,6 +5,4 @@ node_modules/
 .vscode/
 
 # Other
-.env
-.env.*
 config.js
