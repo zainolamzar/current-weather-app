@@ -35,17 +35,36 @@ async function getWeather(latlon) {
 }
 
 function displayWeather(data) {
-    const weatherResult = document.getElementById('weatherResult');
+    const weatherLocation = document.getElementById('location');
+    const weatherDetail = document.getElementById('detail');
     
-    const cityName = data.name;
+    const city = data.name;
+    const country = data.sys.country;
+    const latitude = data.coord.lat;
+    const longitude = data.coord.lon;
     const temperature = data.main.temp;
     const description = data.weather[0].main;
+    const humidity = data.main.humidity;
 
-    const resultHTML = `<p>City: ${cityName}</p>
-                       <p>Temperature: ${temperature} °C</p>
-                       <p>Description: ${description}</p>`;
+    const resultLocation = `${city}, ${country}`;
+    const resultLatLon = `${latitude}, ${longitude}`;
 
-    weatherResult.innerHTML = resultHTML;
+    const location = `<p>${resultLocation}</p>
+                    <p>${resultLatLon}</p>
+                    `;
+    weatherLocation.innerHTML = location;
+    weatherLocation.style.display = 'block';
+
+    const resultTemperature = `${temperature}°C`;
+    const resultHumidity = `${humidity}%`;
+    const resultDescription = `${description}`;
+
+    const detail = `<p>${resultTemperature}</p>
+                    <p>${resultDescription}</p>
+                    <p>${resultHumidity}</p>
+                    `;
+    weatherDetail.innerHTML = detail;
+    weatherDetail.style.display = 'block';
 }
 
 async function searchWeather() {
