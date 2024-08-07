@@ -49,8 +49,8 @@ function displayWeather(data) {
     const resultLocation = `${city}, ${country}`;
     const resultLatLon = `${latitude}, ${longitude}`;
 
-    const location = `<p>${resultLocation}</p>
-                    <p>${resultLatLon}</p>
+    const location = `<p id="resultLocation">${resultLocation}</p>
+                    <p id="resultLatLon">${resultLatLon}</p>
                     `;
     weatherLocation.innerHTML = location;
     weatherLocation.style.display = 'block';
@@ -59,9 +59,9 @@ function displayWeather(data) {
     const resultHumidity = `${humidity}%`;
     const resultDescription = `${description}`;
 
-    const detail = `<p>${resultTemperature}</p>
-                    <p>${resultDescription}</p>
-                    <p>${resultHumidity}</p>
+    const detail = `<p id="resultTemperature">${resultTemperature}</p>
+                    <p id="resultDescription">${resultDescription}</p>
+                    <p id="resultHumidity">${resultHumidity}</p>
                     `;
     weatherDetail.innerHTML = detail;
     weatherDetail.style.display = 'block';

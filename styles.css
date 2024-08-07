@@ -5,33 +5,62 @@ body {
     height: 20vh;
 }
 
+.weather-container h1 {
+    font-weight: 400;
+    font-size: 55px;
+}
+
 .search-container {
     display: flex;
+    justify-content: center;
     align-items: center;
-    border: 1px solid #ccc;
+    height: 35px;
     border-radius: 5px;
-    padding: 5px;
+    overflow: hidden;
 }
-  
-.search-container input {
+
+.input {
     flex: 1;
-    border: none;
+    height: 100%;
     outline: none;
-    padding: 10px;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #F5F5F5;
+    border: 1px solid #B8B8B8;
+    caret-color: #1F1F1F;
+    color: #1F1F1F;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    box-sizing: border-box; /* Ensure padding and border are included in the height */
 }
   
-.search-container button {
-    background-color: #4CAF50;
+.input:hover {
+    border: 2px solid #1F1F1F;
+}
+  
+.input:focus {
+    border: 2px solid #1F1F1F;
+    background-color: #B8B8B8;
+}
+  
+.search__btn {
     border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 5px;
     cursor: pointer;
+    background-color: #F5F5F5;
+    border-radius: 0 5px 5px 0;
+    height: 100%; /* Match the height of the container */
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease;
+    box-sizing: border-box; /* Ensure padding and border are included in the height */
+}
+  
+.search__btn:hover {
+    background-color: rgba(54, 54, 56, 1);
+    color: #F5F5F5;
 }
 
 #location {
@@ -40,4 +69,29 @@ body {
 
 #detail {
     display: none;
+}
+
+#resultLocation {
+    font-weight: 300;
+    font-size: 20px;
+}
+
+#resultLatLon {
+    font-weight: 200;
+    font-size: 20px;
+}
+
+#resultTemperature {
+    font-weight: 500;
+    font-size: 40px;
+}
+
+#resultDescription {
+    font-weight: 300;
+    font-size: 30px;
+}
+
+#resultHumidity {
+    font-weight: 200;
+    font-size: 20px;
 }
