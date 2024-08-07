@@ -42,7 +42,7 @@ function displayWeather(data) {
     const country = data.sys.country;
     const latitude = data.coord.lat;
     const longitude = data.coord.lon;
-    const temperature = data.main.temp;
+    const temperature = Math.ceil(data.main.temp);
     const description = data.weather[0].main;
     const humidity = data.main.humidity;
 

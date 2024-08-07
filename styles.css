@@ -1,7 +1,37 @@
 body {
+    font-family: "Ubuntu", sans-serif;
     display: grid;
     place-items: center; /* Shorthand for align-items: center; justify-items: center; */
     height: 20vh;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+}
+  
+.search-container input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+}
+  
+.search-container button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 #location {
