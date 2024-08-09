@@ -74,24 +74,29 @@ body {
 #resultLocation {
     font-weight: 300;
     font-size: 20px;
+    justify-content: center;
 }
 
 #resultLatLon {
     font-weight: 200;
     font-size: 20px;
+    justify-content: center;
 }
 
 #resultTemperature {
     font-weight: 500;
     font-size: 40px;
+    justify-content: center;
 }
 
 #resultDescription {
     font-weight: 300;
     font-size: 30px;
+    justify-content: center;
 }
 
 #resultHumidity {
     font-weight: 200;
     font-size: 20px;
+    justify-content: center;
 }
